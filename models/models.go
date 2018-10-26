@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/jinzhu/gorm"
-	_ "github.com/mattn/go-sqlite3"
-	//_ "github.com/go-sql-driver/mysql"
+	//_ "github.com/mattn/go-sqlite3"
+	_ "github.com/go-sql-driver/mysql"
 	"github.com/microcosm-cc/bluemonday"
 	"github.com/russross/blackfriday"
 	"github.com/wangsongyan/wblog/system"
@@ -35,7 +35,7 @@ type Page struct {
 type Post struct {
 	BaseModel
 	Title       string     // title
-	Body        string     // body
+	Body        string		'sql:"type:text;"'  // body 指定映射成text类型
 	View        int        // view count
 	IsPublished bool       // published or not
 	Tags        []*Tag     `gorm:"-"` // tags of post
@@ -118,14 +118,18 @@ var DB *gorm.DB
 
 func InitDB() (*gorm.DB, error) {
 
-	db, err := gorm.Open("sqlite3", system.GetConfiguration().DSN)
+	//db, err := gorm.Open("mysql","root:104081@tcp(127.0.0.1:3306)/wblog?charset=utf8&parseTime=True&loc=Local")
+	db, err := gorm.Open("mysql", system.GetConfiguration().DSN)
+	//db, err := gorm.Open("sqlite3", system.GetConfiguration().DSN)
 	//db, err := gorm.Open("mysql", "root:mysql@/wblog?charset=utf8&parseTime=True&loc=Asia/Shanghai")
 	if err == nil {
 		DB = db
 		//db.LogMode(true)
-		db.AutoMigrate(&Page{}, &Post{}, &Tag{}, &PostTag{}, &User{}, &Comment{}, &Subscriber{}, &Link{})
+		db.Set("gorm:table_options", "CHARSET=utf8mb4").AutoMigrate(&Page{}, &Post{}, &Tag{}, &PostTag{}, &User{}, &Comment{}, &Subscriber{}, &Link{})
 		db.Model(&PostTag{}).AddUniqueIndex("uk_post_tag", "post_id", "tag_id")
 		return db, err
+	}else {
+		println("data err:",err)
 	}
 	return nil, err
 }

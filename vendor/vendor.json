@@ -123,6 +123,12 @@
 			"revisionTime": "2017-08-30T04:18:57Z"
 		},
 		{
+			"checksumSHA1": "cK5EYsGNamA4KfscaiMY7uZ7p1I=",
+			"path": "github.com/go-sql-driver/mysql",
+			"revision": "7daee5be2a29576f4bada53f3754b8cf886772a6",
+			"revisionTime": "2018-10-20T13:49:31Z"
+		},
+		{
 			"checksumSHA1": "YpgvTvW1gWqfe/zXQbIl8yF1eHQ=",
 			"path": "github.com/go-yaml/yaml",
 			"revision": "cd8b52f8269e0feb286dfeef29f8fe4d5b397e0b",
@@ -217,6 +223,36 @@
 			"path": "github.com/ugorji/go/codec",
 			"revision": "8c0409fcbb70099c748d71f714529204975f6c3f",
 			"revisionTime": "2017-08-26T15:59:43Z"
+		},
+		{
+			"checksumSHA1": "oyxe+7N3RTtz8Vr22M5bUipRf0E=",
+			"path": "github.com/wangsongyan/wblog",
+			"revision": "5fc3cd09e900cccbf9d9943a52615324e6509508",
+			"revisionTime": "2018-10-25T15:01:33Z"
+		},
+		{
+			"checksumSHA1": "1AiQW1UjlMeIuK/jCmb6UG0yzkM=",
+			"path": "github.com/wangsongyan/wblog/controllers",
+			"revision": "5fc3cd09e900cccbf9d9943a52615324e6509508",
+			"revisionTime": "2018-10-25T15:01:33Z"
+		},
+		{
+			"checksumSHA1": "pl/195aVX5J1+rWwWB2gZbmVvEc=",
+			"path": "github.com/wangsongyan/wblog/helpers",
+			"revision": "5fc3cd09e900cccbf9d9943a52615324e6509508",
+			"revisionTime": "2018-10-25T15:01:33Z"
+		},
+		{
+			"checksumSHA1": "saaltSP9qUh5G3v9rpAXLgf02z8=",
+			"path": "github.com/wangsongyan/wblog/models",
+			"revision": "5fc3cd09e900cccbf9d9943a52615324e6509508",
+			"revisionTime": "2018-10-25T15:01:33Z"
+		},
+		{
+			"checksumSHA1": "sn90YyQPzM7ay0otFquRfIk902I=",
+			"path": "github.com/wangsongyan/wblog/system",
+			"revision": "5fc3cd09e900cccbf9d9943a52615324e6509508",
+			"revisionTime": "2018-10-25T15:01:33Z"
 		},
 		{
 			"checksumSHA1": "dr5+PfIRzXeN+l1VG+s0lea9qz8=",
