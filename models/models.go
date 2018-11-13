@@ -35,7 +35,7 @@ type Page struct {
 type Post struct {
 	BaseModel
 	Title       string     // title
-	Body        string		'sql:"type:text;"'  // body 指定映射成text类型
+	Body        string		`sql:"type:text;"`  // body 指定映射成text类型
 	View        int        // view count
 	IsPublished bool       // published or not
 	Tags        []*Tag     `gorm:"-"` // tags of post
