@@ -7,7 +7,7 @@ github_clientid: 393ea988c10aa30f1ec3
 github_clientsecret: 9e20ac13ec276673e0e634cdf31373f534cac702
 github_authurl: https://github.com/login/oauth/authorize?client_id=%s&scope=user:email&state=%s
 # 与github配置的回调地址一致
-github_redirecturl: http://139.219.2.106:8090/oauth2callback
+github_redirecturl: http://139.219.2.106:80/oauth2callback
 github_tokenurl: https://github.com/login/oauth/access_token
 github_scope:
 smtp_username:
@@ -16,7 +16,7 @@ smtp_host:
 session_secret: wblog
 domain:
 public: static
-addr: :8090
+addr: :80
 backup_key:
 dsn: root:104081@tcp(127.0.0.1:3306)/wblog?charset=utf8&parseTime=True&loc=Local
 #dsn: wblog.db?_loc=Asia/Shanghai
